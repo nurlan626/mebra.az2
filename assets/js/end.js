@@ -2895,10 +2895,13 @@ itemsButtonListMobile.forEach(item => {
 const selectBtnCity = document.querySelector(".select-btn-city");
 let itemsCity = document.querySelectorAll(".item_city");
 let listItemsFilterCity = document.querySelector('.list-items-city-desktop');
+let cityInput = document.querySelector(".cityInput");
 let isCityLoading = false;
 let selectedProductCity = [];
 let selectedCityIds = [];
-
+cityInput.addEventListener("input", () => {
+    loadCategoriesCity();
+})
 
 
 // function addClickListenersToProductsCity() {
@@ -2973,6 +2976,15 @@ function updateSelectedProductsCity() {
 
 
 async function loadCategoriesCity() {
+    listItemsFilterCity.innerHTML = `
+    <div class="button-app">
+        <button id="clearButtonFilterCity">Təmizlə</button>
+    </div>
+
+    <div class="button-app">
+        <button type="click" id="closeButtonFilterCity">Tətbiq et</button>
+    </div>
+    `;
     try {
         const res = await fetch(`${baseUrl}/${getAllCities}`);
         if (!res.ok) {
@@ -2980,7 +2992,9 @@ async function loadCategoriesCity() {
         }
 
         const data = await res.json();
-        const cities = data?.cities
+        let cities = data?.cities
+        cities = cities.filter((city) => city.name.toLowerCase().includes(cityInput.value.toLowerCase()) )
+
         cities.forEach((city) => {
             const cityName = city?.name;
             const cityId = city?.id;
