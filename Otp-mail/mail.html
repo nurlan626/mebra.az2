@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <!-- all css here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,300;1,500;1,700;1,800&display=swap");
+
+        *, * ::before , * ::after { box-sizing: border-box; }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .container-form {
+            width: 100%;
+        }
+
+        .form-logo figure img {
+            width: 100%;
+            height: 55px;
+            display: block;
+            object-fit: contain;
+        }
+
+        .form-content {
+            font-style: normal;
+            font-weight: 600;
+            text-align: center;
+            color: #8C2320;
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+        .otp-number {
+            font-size: 50px;
+            color: #8C2320;
+            border: dashed 1px #8C2320;
+        }
+
+        .otp-footer {
+            text-decoration: underline;
+            margin-bottom: 0;
+        }
+
+        .mebra {
+            color: #8C2320;  
+        }
+
+    
+        @media only screen and (max-width: 600px) { 
+
+            .form-logo {
+                margin-top: 20px;
+            }
+
+            .form-login {
+                margin-top: 60px;
+            }
+
+        }
+
+
+
+        @media (min-width: 601px) and (max-width: 767px) {
+
+            .form-logo {
+                margin-top: 45px;
+            }
+
+            .form-login {
+                margin-top: 93px;
+            }
+
+        }
+
+
+
+        @media (min-width: 768px) and (max-width: 991px) { 
+
+            .form-logo {
+                margin-top: 45px;
+            }
+
+            .form-login {
+                margin-top: 93px;
+            }
+
+        }
+
+
+
+
+        @media only screen and (min-width: 992px) {
+
+            .form-logo {
+                margin-top: 40px;
+            }
+
+            .form-login {
+                margin-top: 48px;
+            }
+
+            .form-content {
+                font-size: 23px;
+                line-height: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section Login Start -->
+    <section class=" container container-form forms">
+        <div class="form-logo">
+            <figure>
+                <img src="./header-logo.png" alt="header-logo">
+            </figure>
+        </div>
+
+        <div class="form-field-email">
+            <div class="form-login">
+                <div class="form-content">
+                    Qeydiyyat
+                </div>
+                <p class="mt-3 d-flex justify-content-center align-items-center text-center">Bizi seçdiyiniz üçün təşəkkür edirik. Qeydiyyat proseduruna davam etmək üçün aşağıdakı OTP-dən istifadə edin. OTP 3 dəqiqə ərzində etibarlıdır.</p>
+                
+                <div class="mt-2 d-flex justify-content-center align-items-center text-center otp-number">
+                    0202
+                </div>
+
+                <p class="otp-footer mt-2">Hörmətlə ,</p>
+                <p><strong class="otp-footer mebra">mebra</strong> komandası</p>
+            </div>
+        </div>
+
+        
+    </section>
+    <!-- Section Login End -->
+
+</body>
+
+</html>
